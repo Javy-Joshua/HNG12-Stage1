@@ -25,6 +25,10 @@ app.get('/number/:num', async (req, res) => {
         funFact = "No fun fact available for this nmber"
     }
 
+      if (main.isArmStrong(num)) {
+        funFact = main.getArmstrongFact(num);
+      }
+
       const response = {
         number: num,
         is_prime: main.isPrime(num),

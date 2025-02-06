@@ -55,10 +55,18 @@ const getParity = (num) => {
 
 console.log(getParity(4))
 
+const getArmstrongFact = (num) => {
+    const digits = String(num).split('')
+    const length = digits.length
+    const explanation = digits.map(d => `${d}^${length}`).join(' + ')
+    return `${num} is an Armstrong number because ${explanation} = ${num}`;
+}
+
 module.exports = {
     isPrime,
     isPerfect,
     isArmStrong,
     getDigitSum,
-    getParity
+    getParity,
+    getArmstrongFact
 }
