@@ -54,3 +54,11 @@ const getParity = (num) => {
 }
 
 console.log(getParity(4))
+
+module.exports = {
+    isPrime,
+    isPerfect,
+    isArmStrong,
+    getDigitSum,
+    getParity
+}
