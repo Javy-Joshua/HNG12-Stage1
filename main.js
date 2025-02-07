@@ -14,8 +14,6 @@ const isPrime = (num) => {
     return true
 }
 
-// console.log(isPrime(100))
-// console.log(isPrime(23))
 
 const isPerfect = (num) => {
     if (num <= 1) 
@@ -31,8 +29,6 @@ const isPerfect = (num) => {
 }
 
 
-console.log(isPerfect(6))
-
 
 const isArmStrong = (num) => {
     const digits = String(num).split('') 
@@ -41,19 +37,16 @@ const isArmStrong = (num) => {
     return sum === num
 }
 
-console.log(isArmStrong(153))
 
 const getDigitSum = (num) => {
     return String(num).split('').reduce((acc, digit) => acc + Number(digit), 0)
 }
 
-console.log(getDigitSum(153))
 
 const getParity = (num) => {
     return num % 2 === 0 ? 'even' : 'odd'
 }
 
-console.log(getParity(4))
 
 const getArmstrongFact = (num) => {
     const digits = String(num).split('')
