@@ -5,12 +5,12 @@ const app = express()
 const port = 4000
 
 
-app.get('/api/classify-number/:num', async (req, res) => {
-    const num = Number(req.params.num)
+app.get('/api/classify-number', async (req, res) => {
+    const num = Number(req.query.number)
 
     if (isNaN(num)) {
         return res.status(400).json({
-            number: req.params.num,
+            number: req.query.number,
             error: true
         })
     }
@@ -45,6 +45,11 @@ app.get('/api/classify-number/:num', async (req, res) => {
       res.json(response);
 
 })
+
+app.use((req, res) => {
+  res.status(404).json({ error: true, message: "Route not found" });
+});
+
 
 
 
