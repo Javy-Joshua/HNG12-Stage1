@@ -5,12 +5,12 @@ const app = express()
 const port = 4000
 
 
-app.get('/number/:num', async (req, res) => {
+app.get('/api/classify-number/:num', async (req, res) => {
     const num = Number(req.params.num)
 
     if (isNaN(num)) {
         return res.status(400).json({
-            number: "alphabet",
+            number: req.params.num,
             error: true
         })
     }
